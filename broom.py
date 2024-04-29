@@ -11,7 +11,10 @@ import subprocess
 #Main
 def main():
     #Header
-    print(".Alright, let's\nstart sweepin'.\n...............\n.............//\n............//.\n...........//..\n..........//...\n.........//....\n........//.....\n.......//......\n...‰‰‰‰‰‰‰‰‰‰‰.\n..///////////..\n././././././...\n~‰‰»‡‰‰~‰‰»~»‰‡\n")
+    try:
+        print(".Alright, let's\nstart sweepin'.\n...............\n.............//\n............//.\n...........//..\n..........//...\n.........//....\n........//.....\n.......//......\n...‰‰‰‰‰‰‰‰‰‰‰.\n..///////////..\n././././././...\n~‰‰»‡‰‰~‰‰»~»‰‡\n")
+    except SyntaxError:
+        pass
     print("This program is a lightweight network sweeping tool intended for quick enumeration\n")
     IPs = input("Enter IPs (comma separated, accepts CIDR): ").split(",")
     portsToScan = [80, 443, 21, 22, 23, 25, 53, 110, 111, 139, 445, 512, 513, 514, 1433, 1521, 2049, 3306, 3389, 5432, 5632, 5900, 5901]
